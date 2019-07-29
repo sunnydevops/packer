@@ -21,18 +21,9 @@
     "image_force_delete":"true"
   }],
 
-  provisioner:[{
-    {
-  "type": "shell",
-  "inline": [
-    "sudo apt-get update",
-    "sudo apt-get install -y git",
-    "sudo apt-get install nginx -y"
-
-    
-  ]
-}
-
-
+ 
+    provisioner:[{
+     "type": "shell",
+      "script": "shell.sh"
   }]
 }
