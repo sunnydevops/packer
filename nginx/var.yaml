@@ -1,0 +1,8 @@
+{
+  "region_aws":"es-west-2",
+  "image_name_aws":"packer_test2",
+  "source_image_aws":"centos_7_04_64_20G_alibase_201701015.vhd",
+  "ssh_username_aws":"root",
+  "instance_type_aws":"ecs.n1.tiny"
+
+}

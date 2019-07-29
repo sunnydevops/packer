@@ -1,0 +1,7 @@
+$ packer validate nginx.yaml
+$ packer build nginx.yaml
+
+
+
+
+$ packer build -var "access_key"= <IAM access_key> -var "secret_key"= <IAM secret key> nginx.yaml

@@ -1,0 +1,36 @@
+{
+  "variables":{
+    "access_key": "",
+    "secret_key": ""
+   
+  },
+  "builders": [{
+    "type":"alicloud-ecs",
+    "access_key":"{{user `access_key`}}",
+    "secret_key":"{{user `secret_key`}}",
+    "region":"cn-beijing",
+    "image_name":"packer_test2",
+    "source_image":"centos_7_04_64_20G_alibase_201701015.vhd",
+    "ssh_username":"root",
+    "instance_type":"ecs.n1.tiny",
+    "io_optimized":"true",
+    "image_force_delete":"true"
+  }
+  ],
+
+  provisioner:[{
+    {
+  "type": "shell",
+  "inline": [
+    "sudo apt-get update",
+    "sudo apt-get install -y git",
+    "sudo apt-get install java-default -y",
+    "sudo apt-get install mavan",
+    "sudo apt-get install jenkins"
+
+  ]
+  }
+
+  }
+  ]
+}
